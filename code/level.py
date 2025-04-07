@@ -22,8 +22,7 @@ class Level:
 
 
     def run(self):
-
-        #pygame.mixer_music.load(f'./assets/{self.name}.mp3')
+        #pygame.mixer_music.load(f'./assets/{self.name}.mp3')  ERRO AO CARREGAR A MUSICA
         pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
         while True:
