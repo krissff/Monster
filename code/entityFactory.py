@@ -1,7 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from Const import WIN_WIDHT
+from Const import WIN_WIDHT, WIN_HEIGHT
 from code.background import Background
+from code.player import Player
+
 
 class EntityFactory:
 
@@ -15,5 +17,6 @@ class EntityFactory:
                     list_pb.append(Background(f'LevelPb{i}', (WIN_WIDHT, 0)))
 
                 return list_pb
-
+            case 'Player':
+                return Player('Player', (10, WIN_HEIGHT / 2))
 

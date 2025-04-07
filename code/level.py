@@ -18,11 +18,12 @@ class Level:
         self.game_mode = game_mode
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('LevelPb'))
+        self.entity_list.append(EntityFactory.get_entity('Player'))
         self.timeout = 20000 # 20 Segundos
 
 
     def run(self):
-        #pygame.mixer_music.load(f'./assets/{self.name}.mp3')  ERRO AO CARREGAR A MUSICA
+        #pygame.mixer_music.load(f'./assets/{self.name}.mp3')  #ERRO AO CARREGAR A MUSICA
         pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
         while True:
@@ -41,7 +42,7 @@ class Level:
             self.level_text(14, f'fps: {clock.get_fps() :.0f}', COLOR_WHITE, (10, WIN_HEIGHT - 35))
             self.level_text(14, f'entidades : {len(self.entity_list)}', COLOR_WHITE, (10, WIN_HEIGHT - 20))
             pygame.display.flip()
-        #pass
+        pass
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
