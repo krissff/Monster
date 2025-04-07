@@ -2,21 +2,16 @@
 # -*- coding: utf-8 -*-
 
 import pygame
-
+from Const import WIN_WIDHT, WIN_HEIGHT
 from code.menu import Menu
 
 
 class Game:
     def __init__(self):
         pygame.init()
-        self.window = pygame.display.set_mode(size=(600, 480))
-
+        self.window = pygame.display.set_mode(size=(WIN_WIDHT, WIN_HEIGHT))
 
     def run(self):
-        #    print('Setup Start')
-        # print('Setup End')
-        # print('Loop Start')
-
         while True:
             menu = Menu(self.window)
             menu.run()
@@ -24,10 +19,6 @@ class Game:
 
 
 
-            # Checar todos os eventos
-          #  for event in pygame.event.get():
-            #     if event.type == pygame.QUIT:
-            #       pygame.quit()  # Fechar janela
-    #       quit()  # Encerrar pygame
+
 
 
