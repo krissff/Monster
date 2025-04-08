@@ -23,9 +23,25 @@ ENTITY_SPEED = {
     'LevelPb3': 3,
     'LevelPb4': 4,
     'Player': 4,
+    'PlayerShot': 6,
     'Enemy1': 4,
     'Enemy2': 5,
 }
 
 #S
 SPAWN_TIME = 4000
+
+#Vidas
+ENTITY_HEALTH = {
+    'LevelPb0': 999,
+    'LevelPb1': 999,
+    'LevelPb2': 999,
+    'LevelPb3': 999,
+    'LevelPb4': 999,
+    'Player': 300,
+    'Enemy1': 50,
+    'Enemy2': 60,
+}
+
+#Tiros
+PLAYER_KEY_SHOTS = {'Player': pygame.K_RCTRL}
